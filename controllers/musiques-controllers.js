@@ -71,7 +71,7 @@ const getMusiqueById = async (req, res, next) => {
   res.json({ musique: musique.toObject({ getters: true }) });
 };
 
-const createMusique = async (req, res) => {
+const createMusique = async (req, res, next) => {
   // console.log(req.body)
   const { auteur, annee, titre, imageUrl } = req.body;
   const createdMusique = new Musique({

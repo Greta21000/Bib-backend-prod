@@ -18,9 +18,11 @@ app.use(cors(corsOptions))
 
 const musiquesRoutes = require('./routes/musiques-routes')
 const filmsRoutes = require('./routes/films-routes')
+const usersRoutes = require('./routes/users-routes')
 
 app.use('/api/musiques', musiquesRoutes);
 app.use('/api/films', filmsRoutes)
+app.use('/api/users', usersRoutes)
 
 app.use((req, res, next) => {
     const error = new HttpError('Page non trouvée', 404)
